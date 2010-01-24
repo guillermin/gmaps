@@ -64,7 +64,7 @@ abstract class Kohana_Gmaps {
 		$url = $ca['url'].'?';
 		unset($ca['url']);
 		foreach ($ca as $key=>$value) $url .= '&'.$key.'='.$value;
-		$url .= '&q='.str_replace(' ', '+', $address);
+		$url .= '&q='.str_replace(' ', '+', $q);
 		echo $url.'<br />';
 		// Get the server response
 		$response = Remote::get($url);

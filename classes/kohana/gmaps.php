@@ -65,7 +65,6 @@ abstract class Kohana_Gmaps {
 		unset($ca['url']);
 		foreach ($ca as $key=>$value) $url .= '&'.$key.'='.$value;
 		$url .= '&q='.str_replace(' ', '+', $q);
-		echo $url.'<br />';
 		// Get the server response
 		$response = Remote::get($url);
 		if ($this->config->get('output') == 'json') $response = json_decode($response);
